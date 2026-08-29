@@ -1,0 +1,2595 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SEÑALI | Aula Virtual Inclusiva</title>
+
+<style>
+
+/* =========================================================
+   VARIABLES DE COLORES
+========================================================= */
+
+:root {
+
+    --azul: #2563eb;
+    --azul-oscuro: #1e3a8a;
+    --azul-claro: #dbeafe;
+
+    --rosa: #ec4899;
+    --rosa-oscuro: #be185d;
+    --rosa-claro: #fce7f3;
+
+    --fondo: #f8faff;
+
+    --blanco: #ffffff;
+
+    --texto: #172554;
+
+    --gris: #64748b;
+
+    --borde: #dbe2ef;
+
+}
+
+
+/* =========================================================
+   CONFIGURACIÓN GENERAL
+========================================================= */
+
+* {
+
+    box-sizing: border-box;
+
+    margin: 0;
+
+    padding: 0;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+}
+
+
+body {
+
+    background:
+        linear-gradient(
+            135deg,
+            #f8faff,
+            #fff0f7
+        );
+
+    color: var(--texto);
+
+}
+
+
+/* =========================================================
+   ENCABEZADO
+========================================================= */
+
+header {
+
+    height: 82px;
+
+    background: white;
+
+    border-bottom:
+        3px solid var(--rosa);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding:
+        10px 25px;
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 100;
+
+    box-shadow:
+        0 3px 15px rgba(37,99,235,.10);
+
+}
+
+
+/* LOGO */
+
+.logo-area {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+
+}
+
+
+.logo-img {
+
+    width: 58px;
+
+    height: 58px;
+
+    object-fit: cover;
+
+    border-radius: 14px;
+
+    border:
+        3px solid var(--rosa);
+
+    box-shadow:
+        0 3px 10px
+        rgba(236,72,153,.25);
+
+}
+
+
+.logo-text h1 {
+
+    color: var(--azul);
+
+    font-size: 25px;
+
+}
+
+
+.logo-text span {
+
+    color: var(--rosa);
+
+    font-weight: bold;
+
+}
+
+
+.logo-text p {
+
+    color: var(--gris);
+
+    font-size: 12px;
+
+    margin-top: 3px;
+
+}
+
+
+/* TITULO HEADER */
+
+.header-center {
+
+    text-align: center;
+
+}
+
+
+.header-center strong {
+
+    color: var(--azul-oscuro);
+
+    font-size: 17px;
+
+}
+
+
+.header-center p {
+
+    color: var(--gris);
+
+    font-size: 12px;
+
+    margin-top: 4px;
+
+}
+
+
+/* ROL */
+
+.role {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+}
+
+
+.role label {
+
+    font-weight: bold;
+
+    color: var(--azul-oscuro);
+
+}
+
+
+.role select {
+
+    padding:
+        9px 13px;
+
+    border:
+        2px solid var(--rosa);
+
+    border-radius: 9px;
+
+    color: var(--azul-oscuro);
+
+    background: white;
+
+    font-weight: bold;
+
+}
+
+
+/* =========================================================
+   ESTRUCTURA
+========================================================= */
+
+.container {
+
+    display: flex;
+
+    min-height:
+        calc(100vh - 82px);
+
+}
+
+
+/* =========================================================
+   MENU LATERAL
+========================================================= */
+
+.sidebar {
+
+    width: 245px;
+
+    background: white;
+
+    border-right:
+        2px solid var(--azul-claro);
+
+    padding: 25px 18px;
+
+}
+
+
+.sidebar-title {
+
+    color: var(--azul);
+
+    font-size: 20px;
+
+    font-weight: bold;
+
+    margin-bottom: 22px;
+
+    padding-left: 8px;
+
+}
+
+
+.menu {
+
+    padding:
+        12px 14px;
+
+    margin-bottom: 7px;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    color: #475569;
+
+    transition: .2s;
+
+}
+
+
+.menu:hover {
+
+    background: var(--rosa-claro);
+
+    color: var(--rosa-oscuro);
+
+}
+
+
+.menu.active {
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--azul-claro),
+            var(--rosa-claro)
+        );
+
+    color: var(--azul-oscuro);
+
+    font-weight: bold;
+
+    border-left:
+        4px solid var(--rosa);
+
+}
+
+
+/* =========================================================
+   CAPACITACIÓN LATERAL
+========================================================= */
+
+.training {
+
+    margin-top: 30px;
+
+    padding-top: 20px;
+
+    border-top:
+        1px solid var(--borde);
+
+}
+
+
+.training-title {
+
+    font-weight: bold;
+
+    color: var(--azul-oscuro);
+
+    margin-bottom: 10px;
+
+}
+
+
+.training button {
+
+    width: 100%;
+
+    margin-top: 7px;
+
+    padding: 10px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    background: #f1f5f9;
+
+    color: var(--texto);
+
+    font-weight: bold;
+
+}
+
+
+.training button:hover {
+
+    background: var(--rosa-claro);
+
+    color: var(--rosa-oscuro);
+
+}
+
+
+/* =========================================================
+   CONTENIDO
+========================================================= */
+
+main {
+
+    flex: 1;
+
+    padding: 28px;
+
+    max-width: 1500px;
+
+    margin: auto;
+
+    width: 100%;
+
+}
+
+
+/* =========================================================
+   TITULO
+========================================================= */
+
+.title {
+
+    text-align: center;
+
+    margin-bottom: 20px;
+
+}
+
+
+.title h2 {
+
+    font-size: 30px;
+
+    color: var(--azul-oscuro);
+
+}
+
+
+.title h2 span {
+
+    color: var(--rosa);
+
+}
+
+
+.title p {
+
+    color: var(--gris);
+
+    margin-top: 7px;
+
+}
+
+
+/* =========================================================
+   ESTADO
+========================================================= */
+
+.status {
+
+    background:
+        linear-gradient(
+            90deg,
+            #eff6ff,
+            #fdf2f8
+        );
+
+    border:
+        1px solid var(--azul-claro);
+
+    border-left:
+        5px solid var(--rosa);
+
+    color: var(--azul-oscuro);
+
+    padding: 11px;
+
+    border-radius: 9px;
+
+    text-align: center;
+
+    font-weight: bold;
+
+    margin-bottom: 22px;
+
+}
+
+
+/* =========================================================
+   COMUNICACIÓN
+========================================================= */
+
+.communication {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr
+        70px
+        1fr;
+
+    gap: 15px;
+
+    align-items: center;
+
+}
+
+
+/* =========================================================
+   TARJETAS
+========================================================= */
+
+.card {
+
+    background: white;
+
+    border-radius: 15px;
+
+    overflow: hidden;
+
+    border:
+        1px solid var(--borde);
+
+    box-shadow:
+        0 5px 18px
+        rgba(30,58,138,.08);
+
+}
+
+
+.card-header {
+
+    padding: 14px;
+
+    text-align: center;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--azul),
+            #3b82f6
+        );
+
+    font-weight: bold;
+
+    font-size: 16px;
+
+}
+
+
+.student-header {
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--rosa-oscuro),
+            var(--rosa)
+        );
+
+}
+
+
+/* =========================================================
+   VIDEO CÁMARA
+========================================================= */
+
+.video-container {
+
+    height: 310px;
+
+    background: #0f172a;
+
+    position: relative;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+}
+
+
+.camera-video {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    display: none;
+
+}
+
+
+.video-placeholder {
+
+    color: white;
+
+    text-align: center;
+
+    font-size: 55px;
+
+}
+
+
+.video-placeholder p {
+
+    font-size: 14px;
+
+    margin-top: 10px;
+
+    color: #cbd5e1;
+
+}
+
+
+/* EN VIVO */
+
+.live {
+
+    display: none;
+
+    position: absolute;
+
+    left: 12px;
+
+    top: 12px;
+
+    z-index: 5;
+
+    background: #dc2626;
+
+    color: white;
+
+    padding:
+        6px 11px;
+
+    border-radius: 20px;
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+}
+
+
+/* =========================================================
+   CONTROLES
+========================================================= */
+
+.camera-controls {
+
+    padding: 13px;
+
+    display: flex;
+
+    gap: 8px;
+
+    flex-wrap: wrap;
+
+}
+
+
+button {
+
+    border: none;
+
+    border-radius: 8px;
+
+    padding:
+        10px 14px;
+
+    cursor: pointer;
+
+    color: white;
+
+    background: var(--azul);
+
+    font-weight: bold;
+
+    transition: .2s;
+
+}
+
+
+button:hover {
+
+    transform:
+        translateY(-1px);
+
+    filter: brightness(.93);
+
+}
+
+
+.btn-rosa {
+
+    background: var(--rosa);
+
+}
+
+
+.btn-rojo {
+
+    background: #dc2626;
+
+}
+
+
+.btn-azul {
+
+    background: var(--azul);
+
+}
+
+
+/* =========================================================
+   FLECHA
+========================================================= */
+
+.arrow {
+
+    text-align: center;
+
+    font-size: 42px;
+
+    color: var(--rosa);
+
+}
+
+
+.arrow p {
+
+    color: var(--azul-oscuro);
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+    line-height: 1.4;
+
+}
+
+
+/* =========================================================
+   TITULOS DE SECCIONES
+========================================================= */
+
+.section-title {
+
+    margin-top: 30px;
+
+    margin-bottom: 14px;
+
+    color: var(--azul-oscuro);
+
+    border-left:
+        5px solid var(--rosa);
+
+    padding-left: 10px;
+
+}
+
+
+/* =========================================================
+   TRADUCCIONES
+========================================================= */
+
+.translations {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr
+        1fr;
+
+    gap: 18px;
+
+}
+
+
+.translation-box {
+
+    background: white;
+
+    border:
+        1px solid var(--borde);
+
+    border-radius: 13px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 4px 14px
+        rgba(30,58,138,.06);
+
+}
+
+
+.translation-title {
+
+    padding: 13px;
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--azul-claro),
+            var(--rosa-claro)
+        );
+
+    color: var(--azul-oscuro);
+
+    font-weight: bold;
+
+}
+
+
+.translation-content {
+
+    padding: 22px;
+
+    min-height: 140px;
+
+    font-size: 19px;
+
+    line-height: 1.6;
+
+}
+
+
+/* =========================================================
+   VIDEO DE SEÑAS
+========================================================= */
+
+.sign-video-container {
+
+    padding: 15px;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #eff6ff,
+            #fdf2f8
+        );
+
+}
+
+
+.sign-video {
+
+    width: 100%;
+
+    max-width: 560px;
+
+    height: 300px;
+
+    object-fit: contain;
+
+    background: #111827;
+
+    border-radius: 10px;
+
+    border:
+        3px solid var(--rosa);
+
+}
+
+
+.sign-label {
+
+    color: var(--rosa-oscuro);
+
+    font-weight: bold;
+
+    margin-top: 10px;
+
+}
+
+
+/* =========================================================
+   FRASES
+========================================================= */
+
+.phrase-box {
+
+    margin-top: 20px;
+
+    background: white;
+
+    padding: 20px;
+
+    border-radius: 13px;
+
+    border:
+        1px solid var(--borde);
+
+}
+
+
+.phrase-box strong {
+
+    color: var(--azul-oscuro);
+
+}
+
+
+.phrase-box p {
+
+    color: var(--gris);
+
+    margin-top: 7px;
+
+}
+
+
+.phrase-buttons {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 9px;
+
+    margin-top: 15px;
+
+}
+
+
+/* =========================================================
+   ESTUDIANTE → MAESTRA
+========================================================= */
+
+.student-simulator {
+
+    margin-top: 20px;
+
+    background: white;
+
+    padding: 20px;
+
+    border-radius: 13px;
+
+    border:
+        1px solid var(--borde);
+
+}
+
+
+.student-simulator h3 {
+
+    color: var(--rosa-oscuro);
+
+}
+
+
+.student-simulator p {
+
+    color: var(--gris);
+
+    line-height: 1.5;
+
+    margin-top: 7px;
+
+}
+
+
+.detected {
+
+    margin-top: 15px;
+
+    padding: 15px;
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--rosa-claro),
+            var(--azul-claro)
+        );
+
+    border-radius: 10px;
+
+    color: var(--azul-oscuro);
+
+    font-weight: bold;
+
+    font-size: 18px;
+
+}
+
+
+/* =========================================================
+   VIDEO ESTUDIANTE
+========================================================= */
+
+.student-sign-video {
+
+    margin-top: 20px;
+
+    padding: 15px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fdf2f8,
+            #eff6ff
+        );
+
+    border-radius: 12px;
+
+}
+
+
+.student-sign-video video {
+
+    width: 100%;
+
+    max-width: 600px;
+
+    height: 300px;
+
+    object-fit: contain;
+
+    background: #111827;
+
+    border-radius: 10px;
+
+    border:
+        3px solid var(--azul);
+
+}
+
+
+.student-video-title {
+
+    color: var(--azul-oscuro);
+
+    font-weight: bold;
+
+    margin-bottom: 10px;
+
+}
+
+
+/* =========================================================
+   CAPACITACIÓN
+========================================================= */
+
+.training-info {
+
+    margin-top: 25px;
+
+    background: white;
+
+    padding: 22px;
+
+    border-radius: 13px;
+
+    border:
+        1px solid var(--borde);
+
+    line-height: 1.7;
+
+}
+
+
+.training-info h3 {
+
+    color: var(--azul-oscuro);
+
+    margin-bottom: 9px;
+
+}
+
+
+.training-info p {
+
+    color: #475569;
+
+}
+
+
+/* =========================================================
+   PIE DE PÁGINA
+========================================================= */
+
+footer {
+
+    margin-top: 30px;
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--azul-oscuro),
+            var(--rosa-oscuro)
+        );
+
+    color: white;
+
+    padding: 18px;
+
+    text-align: center;
+
+    border-radius: 12px;
+
+}
+
+
+footer p {
+
+    font-size: 13px;
+
+}
+
+
+footer strong {
+
+    font-size: 16px;
+
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media(max-width: 1000px) {
+
+    .sidebar {
+
+        display: none;
+
+    }
+
+    .communication {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .arrow {
+
+        transform: rotate(90deg);
+
+        margin: 10px;
+
+    }
+
+    .translations {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .header-center {
+
+        display: none;
+
+    }
+
+}
+
+
+@media(max-width: 600px) {
+
+    header {
+
+        height: auto;
+
+        padding: 12px;
+
+        flex-wrap: wrap;
+
+    }
+
+    .role {
+
+        width: 100%;
+
+        justify-content: center;
+
+    }
+
+    main {
+
+        padding: 15px;
+
+    }
+
+    .video-container {
+
+        height: 250px;
+
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     ENCABEZADO
+========================================================= -->
+
+<header>
+
+
+    <!-- LOGO -->
+
+    <div class="logo-area">
+
+
+        <img
+            class="logo-img"
+            src="WhatsApp Image 2026-08-28 at 6.51.51 PM.jpeg"
+            alt="Logo Señali">
+
+
+        <div class="logo-text">
+
+            <h1>
+                Señali
+            </h1>
+
+            <p>
+                Comunicación educativa inclusiva
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- CENTRO -->
+
+    <div class="header-center">
+
+        <strong>
+            🎓 Aula Virtual Inclusiva
+        </strong>
+
+        <p>
+            Sistema de comunicación bidireccional
+        </p>
+
+    </div>
+
+
+    <!-- ROL -->
+
+    <div class="role">
+
+        <label>
+            Usuario:
+        </label>
+
+        <select id="role">
+
+            <option value="maestra">
+                👩‍🏫 Maestra
+            </option>
+
+            <option value="estudiante">
+                🤟 Estudiante
+            </option>
+
+        </select>
+
+    </div>
+
+
+</header>
+
+
+
+<div class="container">
+
+
+<!-- =========================================================
+     MENU LATERAL
+========================================================= -->
+
+<aside class="sidebar">
+
+
+    <div class="sidebar-title">
+        🤟 Señali
+    </div>
+
+
+    <div class="menu active">
+        🏠 Aula principal
+    </div>
+
+
+    <div class="menu">
+        📚 Mis clases
+    </div>
+
+
+    <div class="menu">
+        💬 Comunicación
+    </div>
+
+
+    <div class="menu">
+        🤟 Lengua de Señas
+    </div>
+
+
+    <div class="menu">
+        📊 Progreso
+    </div>
+
+
+    <!-- CAPACITACIÓN -->
+
+    <div class="training">
+
+        <div class="training-title">
+            📖 Capacitación
+        </div>
+
+
+        <button onclick="training('basico')">
+            🟢 Nivel básico
+        </button>
+
+
+        <button onclick="training('intermedio')">
+            🟡 Nivel intermedio
+        </button>
+
+
+        <button onclick="training('avanzado')">
+            🔵 Nivel avanzado
+        </button>
+
+    </div>
+
+
+</aside>
+
+
+
+<!-- =========================================================
+     CONTENIDO PRINCIPAL
+========================================================= -->
+
+<main>
+
+
+    <div class="title">
+
+        <h2>
+            Aula Virtual <span>Inclusiva</span>
+        </h2>
+
+        <p>
+            Plataforma de comunicación entre
+            docentes y estudiantes sordos
+        </p>
+
+    </div>
+
+
+
+    <!-- ESTADO -->
+
+    <div
+        class="status"
+        id="status">
+
+        🟢 Sistema preparado para la demostración
+
+    </div>
+
+
+
+    <!-- =====================================================
+         CÁMARAS
+    ===================================================== -->
+
+    <div class="communication">
+
+
+        <!-- =================================================
+             MAESTRA
+        ================================================= -->
+
+        <div class="card">
+
+
+            <div class="card-header">
+
+                👩‍🏫 MAESTRA
+
+            </div>
+
+
+            <div class="video-container">
+
+
+                <span
+                    class="live"
+                    id="teacherLive">
+
+                    🔴 EN VIVO
+
+                </span>
+
+
+                <video
+                    id="teacherVideo"
+                    class="camera-video"
+                    autoplay
+                    muted>
+                </video>
+
+
+                <div
+                    id="teacherPlaceholder"
+                    class="video-placeholder">
+
+                    👩‍🏫
+
+                    <p>
+                        Cámara de la maestra
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="camera-controls">
+
+
+                <button
+                    onclick="startTeacherCamera()">
+
+                    📷 Activar cámara
+
+                </button>
+
+
+                <button
+                    class="btn-rojo"
+                    onclick="stopTeacherCamera()">
+
+                    ⛔ Apagar cámara
+
+                </button>
+
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- =================================================
+             FLECHA
+        ================================================= -->
+
+        <div class="arrow">
+
+            ⇄
+
+            <p>
+                COMUNICACIÓN<br>
+                BIDIRECCIONAL
+            </p>
+
+        </div>
+
+
+
+        <!-- =================================================
+             ESTUDIANTE
+        ================================================= -->
+
+        <div class="card">
+
+
+            <div class="card-header student-header">
+
+                🤟 ESTUDIANTE SORDO
+
+            </div>
+
+
+            <div class="video-container">
+
+
+                <span
+                    class="live"
+                    id="studentLive">
+
+                    🔴 EN VIVO
+
+                </span>
+
+
+                <video
+                    id="studentVideo"
+                    class="camera-video"
+                    autoplay
+                    muted>
+                </video>
+
+
+                <div
+                    id="studentPlaceholder"
+                    class="video-placeholder">
+
+                    🤟
+
+                    <p>
+                        Cámara del estudiante
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="camera-controls">
+
+
+                <button
+                    class="btn-rosa"
+                    onclick="startStudentCamera()">
+
+                    📷 Activar cámara
+
+                </button>
+
+
+                <button
+                    class="btn-rojo"
+                    onclick="stopStudentCamera()">
+
+                    ⛔ Apagar cámara
+
+                </button>
+
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- =====================================================
+         MAESTRA → ESTUDIANTE
+    ===================================================== -->
+
+    <h3 class="section-title">
+
+        📤 Maestra → Estudiante
+
+    </h3>
+
+
+    <div class="translations">
+
+
+        <!-- TEXTO -->
+
+        <div class="translation-box">
+
+
+            <div class="translation-title">
+
+                📝 Traducción a texto
+
+            </div>
+
+
+            <div
+                class="translation-content"
+                id="teacherText">
+
+                Buenos días estudiantes.
+                Bienvenidos a nuestra clase.
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- VIDEO SEÑAS -->
+
+        <div class="translation-box">
+
+
+            <div class="translation-title">
+
+                🤟 Lengua de Señas Nicaragüense
+
+            </div>
+
+
+            <div class="sign-video-container">
+
+
+                <video
+                    id="signVideo"
+                    class="sign-video"
+                    controls
+                    autoplay
+                    muted
+                    playsinline>
+
+                    <source
+                        src="WhatsApp Video 2026-08-28 at 6.44.31 PM.mp4"
+                        type="video/mp4">
+
+                    Tu navegador no soporta
+                    reproducción de video.
+
+                </video>
+
+
+                <div
+                    class="sign-label"
+                    id="signLabel">
+
+                    PRESENTACIÓN PERSONAL
+                    EN LENGUA DE SEÑAS NICARAGÜENSE
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- =====================================================
+         SIMULACIÓN MAESTRA
+    ===================================================== -->
+
+    <div class="phrase-box">
+
+
+        <strong>
+
+            🎤 Simulación de comunicación
+            de la maestra
+
+        </strong>
+
+
+        <p>
+
+            Selecciona una frase para simular
+            el proceso de comunicación.
+
+        </p>
+
+
+        <div class="phrase-buttons">
+
+
+            <button
+                onclick="teacherPhrase(0)">
+
+                👋 Buenos días
+
+            </button>
+
+
+            <button
+                onclick="teacherPhrase(1)">
+
+                👩‍🏫 Presentación
+
+            </button>
+
+
+            <button
+                onclick="teacherPhrase(2)">
+
+                📚 Matemáticas
+
+            </button>
+
+
+            <button
+                onclick="teacherPhrase(3)">
+
+                ➕ Suma
+
+            </button>
+
+
+            <button
+                onclick="teacherPhrase(4)">
+
+                📝 Ejercicio
+
+            </button>
+
+
+            <button
+                onclick="teacherPhrase(5)">
+
+                ⭐ Excelente
+
+            </button>
+
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- =====================================================
+         ESTUDIANTE → MAESTRA
+    ===================================================== -->
+
+    <h3 class="section-title">
+
+        📥 Estudiante → Maestra
+
+    </h3>
+
+
+    <div class="translations">
+
+
+        <!-- TRADUCCIÓN -->
+
+        <div class="translation-box">
+
+
+            <div class="translation-title">
+
+                👩‍🏫 Traducción para la maestra
+
+            </div>
+
+
+            <div
+                class="translation-content"
+                id="studentTranslation">
+
+                Esperando la comunicación
+                del estudiante...
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- VIDEO DEL ESTUDIANTE -->
+
+        <div class="translation-box">
+
+
+            <div class="translation-title">
+
+                🤟 Seña realizada por el estudiante
+
+            </div>
+
+
+            <div class="student-sign-video">
+
+
+                <div class="student-video-title">
+
+                    🎥 Video de Lengua de Señas
+
+                </div>
+
+
+                <video
+                    id="studentSignVideo"
+                    controls
+                    muted
+                    playsinline
+                    class="student-sign-video">
+
+                    <source
+                        src="1_necesito que_PixVerse 6_540p_3s.mp4"
+                        type="video/mp4">
+
+                    Tu navegador no soporta
+                    reproducción de video.
+
+                </video>
+
+
+                <div
+                    style="
+                    margin-top:10px;
+                    color:#be185d;
+                    font-weight:bold;
+                    "
+                    id="studentSignLabel">
+
+                    🤟 SEÑA DEL ESTUDIANTE
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- =====================================================
+         SIMULADOR DEL ESTUDIANTE
+    ===================================================== -->
+
+    <div class="student-simulator">
+
+
+        <h3>
+
+            🤟 Simulación de comunicación
+            del estudiante
+
+        </h3>
+
+
+        <p>
+
+            En el prototipo, selecciona una
+            opción para representar la
+            interpretación de la seña realizada
+            por el estudiante.
+
+        </p>
+
+
+        <div class="phrase-buttons">
+
+
+            <button
+                class="btn-rosa"
+                onclick="studentSignFunction(
+                    'HOLA',
+                    '👋'
+                )">
+
+                👋 HOLA
+
+            </button>
+
+
+            <button
+                class="btn-rosa"
+                onclick="studentSignFunction(
+                    'GRACIAS',
+                    '🙏'
+                )">
+
+                🙏 GRACIAS
+
+            </button>
+
+
+            <button
+                class="btn-rosa"
+                onclick="studentSignFunction(
+                    'NO ENTIENDO',
+                    '🤔'
+                )">
+
+                🤔 NO ENTIENDO
+
+            </button>
+
+
+            <button
+                class="btn-rosa"
+                onclick="studentSignFunction(
+                    'REPITA POR FAVOR',
+                    '🔄'
+                )">
+
+                🔄 REPITA
+
+            </button>
+
+
+            <button
+                class="btn-rosa"
+                onclick="studentSignFunction(
+                    'SÍ',
+                    '👍'
+                )">
+
+                👍 SÍ
+
+            </button>
+
+
+            <button
+                class="btn-rosa"
+                onclick="studentSignFunction(
+                    'NO',
+                    '👎'
+                )">
+
+                👎 NO
+
+            </button>
+
+
+        </div>
+
+
+        <div
+            class="detected"
+            id="detected">
+
+            🔎 Esperando señal del estudiante...
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- =====================================================
+         CAPACITACIÓN
+    ===================================================== -->
+
+    <div class="training-info">
+
+
+        <h3>
+
+            📚 Capacitación para el uso
+            de Señali
+
+        </h3>
+
+
+        <p id="trainingText">
+
+            <strong>Nivel básico:</strong>
+
+            El usuario aprende a iniciar
+            las cámaras, reproducir el video
+            de Lengua de Señas y utilizar
+            los controles básicos de comunicación.
+
+        </p>
+
+
+    </div>
+
+
+
+    <!-- =====================================================
+         PIE
+    ===================================================== -->
+
+    <footer>
+
+        <strong>
+            🤟 Señali
+        </strong>
+
+        <p>
+            Prototipo de aplicación educativa
+            inclusiva
+        </p>
+
+        <p>
+            Lengua de Señas Nicaragüense
+            · Educación · Inclusión
+        </p>
+
+    </footer>
+
+
+</main>
+
+</div>
+
+
+
+<script>
+
+/* =========================================================
+   VARIABLES
+========================================================= */
+
+let teacherStream = null;
+
+let studentStream = null;
+
+
+/* =========================================================
+   CÁMARA MAESTRA
+========================================================= */
+
+async function startTeacherCamera() {
+
+    try {
+
+        teacherStream =
+            await navigator.mediaDevices.getUserMedia({
+
+                video: true,
+
+                audio: true
+
+            });
+
+
+        const video =
+            document.getElementById(
+                "teacherVideo"
+            );
+
+
+        video.srcObject =
+            teacherStream;
+
+
+        video.style.display =
+            "block";
+
+
+        document.getElementById(
+            "teacherPlaceholder"
+        ).style.display =
+            "none";
+
+
+        document.getElementById(
+            "teacherLive"
+        ).style.display =
+            "block";
+
+
+        document.getElementById(
+            "status"
+        ).innerHTML =
+
+            "🟢 Cámara de la maestra activa";
+
+
+    }
+
+    catch(error) {
+
+        console.error(error);
+
+        alert(
+
+            "No se pudo activar la cámara " +
+            "de la maestra.\n\n" +
+
+            "Debes permitir el acceso " +
+            "a la cámara y al micrófono."
+
+        );
+
+    }
+
+}
+
+
+/* =========================================================
+   APAGAR CÁMARA MAESTRA
+========================================================= */
+
+function stopTeacherCamera() {
+
+    if(teacherStream) {
+
+        teacherStream
+        .getTracks()
+        .forEach(
+            track => track.stop()
+        );
+
+        teacherStream = null;
+
+    }
+
+
+    document.getElementById(
+        "teacherVideo"
+    ).style.display =
+        "none";
+
+
+    document.getElementById(
+        "teacherPlaceholder"
+    ).style.display =
+        "block";
+
+
+    document.getElementById(
+        "teacherLive"
+    ).style.display =
+        "none";
+
+
+    document.getElementById(
+        "status"
+    ).innerHTML =
+
+        "⚪ Cámara de la maestra apagada";
+
+}
+
+
+/* =========================================================
+   CÁMARA ESTUDIANTE
+========================================================= */
+
+async function startStudentCamera() {
+
+    try {
+
+        studentStream =
+            await navigator.mediaDevices.getUserMedia({
+
+                video: true,
+
+                audio: false
+
+            });
+
+
+        const video =
+            document.getElementById(
+                "studentVideo"
+            );
+
+
+        video.srcObject =
+            studentStream;
+
+
+        video.style.display =
+            "block";
+
+
+        document.getElementById(
+            "studentPlaceholder"
+        ).style.display =
+            "none";
+
+
+        document.getElementById(
+            "studentLive"
+        ).style.display =
+            "block";
+
+
+        document.getElementById(
+            "status"
+        ).innerHTML =
+
+            "🟢 Cámara del estudiante activa";
+
+
+    }
+
+    catch(error) {
+
+        console.error(error);
+
+        alert(
+
+            "No se pudo activar la cámara " +
+            "del estudiante.\n\n" +
+
+            "Debes permitir el acceso " +
+            "a la cámara."
+
+        );
+
+    }
+
+}
+
+
+/* =========================================================
+   APAGAR CÁMARA ESTUDIANTE
+========================================================= */
+
+function stopStudentCamera() {
+
+    if(studentStream) {
+
+        studentStream
+        .getTracks()
+        .forEach(
+            track => track.stop()
+        );
+
+        studentStream = null;
+
+    }
+
+
+    document.getElementById(
+        "studentVideo"
+    ).style.display =
+        "none";
+
+
+    document.getElementById(
+        "studentPlaceholder"
+    ).style.display =
+        "block";
+
+
+    document.getElementById(
+        "studentLive"
+    ).style.display =
+        "none";
+
+
+    document.getElementById(
+        "status"
+    ).innerHTML =
+
+        "⚪ Cámara del estudiante apagada";
+
+}
+
+
+/* =========================================================
+   FRASES DE LA MAESTRA
+========================================================= */
+
+const phrases = [
+
+    {
+
+        text:
+            "Buenos días estudiantes. " +
+            "Bienvenidos a nuestra clase.",
+
+        sign:
+            "BUENOS DÍAS"
+
+    },
+
+
+    {
+
+        text:
+            "Mi nombre es María y soy " +
+            "su profesora.",
+
+        sign:
+            "PRESENTACIÓN PERSONAL"
+
+    },
+
+
+    {
+
+        text:
+            "Hoy vamos a aprender matemáticas.",
+
+        sign:
+            "MATEMÁTICAS"
+
+    },
+
+
+    {
+
+        text:
+            "Vamos a aprender cómo realizar " +
+            "una suma.",
+
+        sign:
+            "SUMA"
+
+    },
+
+
+    {
+
+        text:
+            "Ahora vamos a resolver " +
+            "un ejercicio juntos.",
+
+        sign:
+            "EJERCICIO"
+
+    },
+
+
+    {
+
+        text:
+            "Excelente trabajo. " +
+            "Terminamos la actividad.",
+
+        sign:
+            "EXCELENTE TRABAJO"
+
+    }
+
+];
+
+
+/* =========================================================
+   SIMULAR MAESTRA
+========================================================= */
+
+function teacherPhrase(index) {
+
+    const phrase =
+        phrases[index];
+
+
+    document.getElementById(
+        "teacherText"
+    ).innerText =
+        phrase.text;
+
+
+    document.getElementById(
+        "signLabel"
+    ).innerText =
+        phrase.sign;
+
+
+    const video =
+        document.getElementById(
+            "signVideo"
+        );
+
+
+    video.currentTime = 0;
+
+
+    video.play()
+    .catch(
+        error =>
+        console.log(
+            "Reproducción manual requerida."
+        )
+    );
+
+
+    document.getElementById(
+        "status"
+    ).innerHTML =
+
+        "🟢 Traducción mostrada: " +
+        phrase.sign;
+
+}
+
+
+/* =========================================================
+   ESTUDIANTE → MAESTRA
+========================================================= */
+
+function studentSignFunction(
+    word,
+    emoji
+) {
+
+
+    document.getElementById(
+        "studentTranslation"
+    ).innerHTML =
+
+        "<strong>" +
+        word +
+        "</strong>" +
+
+        "<br><br>" +
+
+        "La aplicación interpretó " +
+
+        "la comunicación realizada " +
+
+        "por el estudiante.";
+
+
+    document.getElementById(
+        "detected"
+    ).innerHTML =
+
+        "🟢 Señal interpretada: " +
+        word;
+
+
+    document.getElementById(
+        "studentSignLabel"
+    ).innerHTML =
+
+        emoji +
+        " " +
+        word;
+
+
+    const video =
+        document.getElementById(
+            "studentSignVideo"
+        );
+
+
+    video.currentTime = 0;
+
+
+    video.play()
+    .catch(
+        error =>
+        console.log(
+            "Reproducción manual requerida."
+        )
+    );
+
+
+    document.getElementById(
+        "status"
+    ).innerHTML =
+
+        "🟢 Comunicación del estudiante " +
+        "recibida por la maestra";
+
+}
+
+
+/* =========================================================
+   CAPACITACIÓN
+========================================================= */
+
+function training(level) {
+
+    const text =
+        document.getElementById(
+            "trainingText"
+        );
+
+
+    if(level === "basico") {
+
+        text.innerHTML =
+
+            "<strong>Nivel básico:</strong> " +
+
+            "Aprende a activar las cámaras, " +
+
+            "identificar las diferentes áreas " +
+
+            "de la interfaz y reproducir los " +
+
+            "videos de Lengua de Señas.";
+
+    }
+
+
+    if(level === "intermedio") {
+
+        text.innerHTML =
+
+            "<strong>Nivel intermedio:</strong> " +
+
+            "Aprende a utilizar la comunicación " +
+
+            "bidireccional, las traducciones " +
+
+            "de texto y los recursos audiovisuales.";
+
+    }
+
+
+    if(level === "avanzado") {
+
+        text.innerHTML =
+
+            "<strong>Nivel avanzado:</strong> " +
+
+            "Conoce el funcionamiento completo " +
+
+            "del prototipo y el proceso que, " +
+
+            "en una futura versión, permitiría " +
+
+            "integrar inteligencia artificial " +
+
+            "para reconocer señas mediante " +
+
+            "la cámara.";
+
+    }
+
+}
+
+
+/* =========================================================
+   CAMBIO DE ROL
+========================================================= */
+
+document.getElementById(
+    "role"
+).addEventListener(
+    "change",
+    function() {
+
+        const role =
+            this.value;
+
+
+        if(role === "maestra") {
+
+            document.getElementById(
+                "status"
+            ).innerHTML =
+
+                "👩‍🏫 Modo maestra activado";
+
+        }
+
+
+        if(role === "estudiante") {
+
+            document.getElementById(
+                "status"
+            ).innerHTML =
+
+                "🤟 Modo estudiante activado";
+
+        }
+
+    }
+);
+
+
+/* =========================================================
+   INICIO
+========================================================= */
+
+console.log(
+    "Señali iniciado correctamente."
+);
+
+console.log(
+    "Logo cargado."
+);
+
+console.log(
+    "Video maestra → estudiante cargado."
+);
+
+console.log(
+    "Video estudiante → maestra cargado."
+);
+
+</script>
+
+
+</body>
+
+</html>
